@@ -1,0 +1,397 @@
+<!-- DOM - DOCUMENT OBJECT MODEL -->
+
+<!-- DOM TREE -->
+
+<!-- Heading 제목
+bold -->
+
+<h1>Hello World</h1>
+
+<h1>Hello World</h1>
+<h2>Hello World</h2>
+<h3>Hello World</h3>
+<h4>Hello World</h4>
+<h5>Hello World</h5>
+
+<!-- paragraph 문장, 문단 -->
+<p>안녕하세요</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eligendi illum quia et dolorum ratione rem, at maxime, voluptate nemo porro eum itaque deleniti optio. Nihil earum atque dolorem doloremque?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, eligendi, porro architecto magnam dignissimos debitis illum repellendus, dolore nemo nihil molestiae autem nam tempore distinctio esse rerum doloribus excepturi officia?</p>
+<!-- divide -->
+<div></div>
+
+<!-- small -->
+<small>Hello World</small>
+<!-- header -->
+<header>Company Logo</header>
+<!-- navigation -->
+<nav>Menu</nav>
+<!-- main content -->
+<main>Content</main>
+<!-- footer -->
+<footer>2022 company</footer>
+
+
+<!-- anchor -->
+attribute 속성
+<br>
+<a href="http://www.google.com" target="_blank">Go to Google</a>
+<br>
+<!-- default 기본값 -->
+<a href="http://www.google.com" target="_self">Go to Google</a>
+<br>
+<!-- Send email -->
+<a href="mailto:kan1190@naver.com">Send mail</a>
+<br>
+<!-- Call 전화걸기 -->
+<a href="tel:+1064790316">Call</a>
+
+<br>
+<!-- Image -->
+
+<!-- source 이미지의 위치 -->
+<!-- alternative 이미지 설명 -->
+<!-- pixabay.com -->
+<img src="../img/20220311_174329.jpg" alt="충북 단양 사인암(舍人巖)"width="500px">
+
+<p>
+    <span style="color: red">
+        <!-- bold -->
+        <b>Lorem</b>
+        <small>, ipsum dolor sit amet consectetur adipisicing elit.Quidem, sapiente.</small> 
+    </span>
+    Quam quia fugit deleniti ratione debitis blanditiis asperiores quis sit, nisi fuga! 
+    <hr>
+    Numquam modi culpa reprehenderit fuga omnis distinctio dolorem?
+</p>
+<!-- List -->
+<!-- ul - unordered list -->
+<!-- ol - ordered list -->
+<ul style="list-style-type: none">
+    <li>
+        <a href="http://www.apple.com" target="_blank">Apple</a>
+    </li>
+    <li>Banana</li>
+    <li>Strawberry</li>
+</ul>
+
+<ol>
+    <li>
+        <a href="../img/20220311_174329.jpg" target="_self">Apple</a>
+    </li>
+    <li>Banana</li>
+    <li>Strawberry</li>
+</ol>
+
+<!-- Data list -->
+<dl>
+    <!-- data title 설명하고자 하는 데이터 -->
+    <dt>서울</dt>
+    <!-- data description 데이터 설명 -->
+    <dd>한국의 수도</dd>
+
+    <dt>도쿄</dt>
+    <dd>왜구의 부족마을</dd>
+</dl>
+
+<!-- Inline CSS, HTML 내부에 CSS 표시 -->
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+
+<!-- Table 표-->
+<table>
+    <!-- table row 테이블 행 -->
+    <tr>
+        <!-- table head 제목 -->
+        <th>월</th>
+        <th>매출</th>
+    </tr>
+    <tr>
+        <!-- table data 데이터 -->
+        <td>1월</td>
+        <td>$100</td>
+    </tr>
+    <tr>
+        <td>2월</td>
+        <td>$150</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>이름</th>
+        <th>이메일</th>
+        <!-- column 열 -->
+        <th colspan="2">연락처</th>
+    </tr>
+    <tr>
+        <td>Baeng</td>
+        <td>kan1190@naver.com</td>
+        <td>01064790316</td>
+        <td>0325473237</td>
+    </tr>
+    <tr>
+        <td>Jun</td>
+        <td>soraike90@gmail.com</td>
+        <td>01063831190</td>
+        <td>0325861113</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>이름</th>
+        <td>강병준</td>
+    </tr>
+    <tr>
+        <th>이메일</th>
+        <td>kan1190@naver.com</td>
+    </tr>
+    <tr>
+        <th rowspan="2">연락처</th>
+        <td>0325473237</td>
+    </tr>
+    <tr>
+        <td>01064790316</td>
+    </tr>
+</table>
+
+<!-- 양식 -->
+<!-- 서버와 직접적으로 통신 -->
+<!-- action FORM이 날아갈 주소 -->
+HTTP Method
+<br>
+1 GET - 데이터를 주소창으로 전달 e.g) 검색 게시물보기
+<br>
+2 POST - 데이터를 내부적으로 전달 e.g) 로그인 회원가입 등
+<br>
+<!-- 3 PUT
+4 DELETE -->
+<form action="/search.php" method="GET">
+    <input type="text">
+    <button type="submit">검색</button>
+</form>
+
+<hr>
+<br><br>
+
+<form action="/login.php" method="POST">
+    <div>
+        <label for="">아이디</label>
+        <input type="text"name="username" placeholder="아이디를 입력하세요">
+    </div>
+
+    <div>
+        <label for="">비밀번호</label>
+        <input type="text" name="password" placeholder="비밀번호를 입력하세요">
+    </div>
+    
+    <div>
+        <!-- name은 서버에서 필요한 값 -->
+        <!-- id는 고유한 값. JavaScript에서 DOM을 조작할 때 주로 사용한다. -->
+        <input type="checkbox" name="remember-me" id="">
+        <label for="s">자동로그인</label>
+    </div>
+
+    <div>
+        <button type="submit">로그인</button>
+    </div>
+</form>
+
+<hr><br><br>
+
+<!-- 블로그 게시물 form -->
+<!-- POST - 데이터가 큰 경우 -->
+<form action="/blog_post.php" method="POST" enctype="multipart/form-data">
+    <h1>블로그</h1>
+    <div>
+        <label for="">제목</label>
+        <input type="text" name="title" placeholder="제목을 입력하세요">
+    </div>
+    
+    <div>
+        <textarea name="content" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <!-- <div>
+        <label for="">첨부파일</label><br>
+        <input type="file" name="file" id=""><br>
+        <input type="file" name="file" id=""><br>
+        <input type="file" name="file" id="">
+    </div> -->
+
+    <div>
+        <label for="">첨부파일</label>
+        <input type="file" name="files" id="" multiple>
+    </div>
+</form>
+<br><br><br>
+<!-- 상품 업로드 -->
+
+<form action="">
+    <h1>상품 업로드</h1>
+    <div class="form-group">
+        <label for="">상품명</label>
+        <input type="text" placeholder="상품명을 입력하세요">
+    </div>
+
+    <div class="form-group">
+        <label for="">카테고리</label>
+        <select name="" id="">
+            <option value="">자켓</option>
+            <option value="">바지</option>
+            <option value="">악세사리</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="">가격</label>
+        <input type="number" min="100">
+    </div>
+
+    <div class="form-group">
+        <label for="">상품 설명</label><br>
+        <textarea name="" id="" cols="30" rows="10" placeholder="상품설명을 입력하세요"></textarea>
+    </div>
+
+    <div class="form-group">
+        <button type="submit">등록</button>
+    </div>
+</form>
+
+<br><br><br>
+
+<form action="">
+    <h1>숙소 예약</h1>
+    <div class="form-group">
+        <label for="">체크인 날짜</label>
+        <input type="date" name="check-in" id="">
+        <input type="time" name="check-in-time" id="">
+    </div>
+
+    <div class="form-group">
+        <label for="">체크아웃 날짜</label>
+        <input type="date" name="check-out" id="">
+        <input type="time" name="check-out-time" id="">
+    </div>
+    
+    <div class="form-group">
+        <!-- name을 같게 해서 하나만 선택할 수 있도록 묶어줘야 한다. -->
+        <input type="radio" name="member" id="">
+        <label for="">성인 1명</label>
+        <input type="radio" name="member" id="">
+        <label for="">성인 2명</label>
+    </div>
+
+    <div class="form-group">
+        <label for="">가격범위</label>
+        <input type="range" name="" id="" min="10000" max="1000000">
+    </div>
+</form>
+
+<br><br><br>
+
+<!-- 엑셀 -->
+<table>
+<tr>
+    <!-- 첫 행은 table head로 해주면 폰트도 굵고 해당열의 메인이 됨 -->
+    <th>상품명</th>
+    <th>카테고리</th>
+    <th>가격</th>
+    <th>시스템</th>
+</tr>
+
+<tr>
+    <td>G.SKILL ROYAL 32GB</td>
+    <td>RAM</td>
+    <td>340,000원</td>
+    <td>공용</td>
+</tr>
+
+<tr>
+    <td>X570 ROG-STRIX E STCOM</td>
+    <td>Mother Board</td>
+    <td>520,000원</td>
+    <td>AMD</td>
+</tr>
+
+<tr>
+    <td>NZXT Z73 RGB</td>
+    <td>쿨러</td>
+    <td>350,000원</td>
+    <td>공용</td>
+</tr>
+
+<tr>
+    <td>5800X</td>
+    <td>CPU</td>
+    <td>450,000원</td>
+    <td>AMD</td>
+</tr>
+
+<tr>
+    <td>3080TI</td>
+    <td>GPU</td>
+    <td>1,950,000원</td>
+    <td>공용</td>
+</tr>
+</table>
+
+<br><br><br>
+
+<!-- HTML Entity -->
+<!-- Reserved words -->
+HTML Entity <br>
+1 Entity name <br>
+2 Entity number <br><br><br><br>
+
+< less than <br>
+> greater than <br>
+"" quotation <br>
+'' apostrophe <br>
+non-breaking space <br>
+& ampersand
+
+<h1>&lt;</h1>
+<h1>&gt;</h1>
+<h1>&quot;</h1>
+<h1>&apos;</h1>
+<h1>&amp;</h1>
+<h1>&nbsp;</h1>
+<h1>Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World</h1>
+
+<br>
+<!-- Entity number -->
+<!-- &# + 숫자 -->
+<h1>&#128516;</h1>
+<h1>&#128515;</h1>
+<h1>&#128514;</h1>
+
+<br><br><br>
+
+<form action="" method="POST">
+    <!-- name은 서버가 필요한 값 -->
+    <input type="text" name="q" value="">
+    <button type="submit">검색</button>
+</form>
+
+$POST["username"]
+$POST["password"]
+
+$GET["q"]
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
